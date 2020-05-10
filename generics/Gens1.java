@@ -57,8 +57,8 @@ class SOList<Type> implements Iterable<Type> {
             //    ++currentIndex;
                 //return arrayList[ randomLoc ] ; // arrayList[currentIndex++];
                 int sz = Xs.size();
-                int loc = Math.floorMod( r.nextInt(), sz );
-                Type val = Xs.remove(loc);
+                randomLoc = Math.floorMod( r.nextInt(), sz );
+                Type val = Xs.remove(randomLoc);
                 return val;
 
             }
