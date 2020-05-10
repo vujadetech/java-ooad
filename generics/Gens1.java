@@ -17,6 +17,8 @@ interface Iterator<E> {
 }
 */
 
+/* The code below is a tweaked version of code on SO.com: https://stackoverflow.com/questions/5849154/can-we-write-our-own-iterator-in-java */
+
 class SOList<Type> implements Iterable<Type> {
 
     private Type[] arrayList;
@@ -60,7 +62,6 @@ class SOList<Type> implements Iterable<Type> {
                 randomLoc = Math.floorMod( r.nextInt(), sz );
                 Type val = Xs.remove(randomLoc);
                 return val;
-
             }
 
             @Override
@@ -101,7 +102,7 @@ public  class Gens1 {
     }
 
     // creating an array of Strings
-    String[] languages = new String[]{"C", "C++", "Java", "Python", "Scala"};
+    String[] languages = new String[]{"first", "C", "C++", "Java", "Python", "Scala", "last"};
 
     // create your list and hold the values using the same list implementation.
     SOList<String> languagesList = new SOList<String>(languages);
