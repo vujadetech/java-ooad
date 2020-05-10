@@ -13,7 +13,7 @@ class Square implements Function {
 
  class Cube implements Function  {
   public double eval(double x) {
-    return x*x*x;
+    return Math.pow(x, 3);
   }
 }
 
@@ -39,7 +39,8 @@ public  class Functions {
 
     //plot(fSq, 0, 1.0, 10);
     //plot( X -> cube.eval(X) , -1, 1.0, 10);
-    plot(sq, -1.0, 1.0, 10);
+    plot(c::eval, -1.0, 1.0, 10); // still works, but Function is better as the type
+    plot(sq, -1.0, 1.0, 10); // surprisingly, works without sq::eval
     System.out.println("sq class = " + sq.getClass());
     System.out.println("cube class = " + cube.getClass());
   }
